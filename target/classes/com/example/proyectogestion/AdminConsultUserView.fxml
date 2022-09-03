@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectogestion.AdminConsultUserController">
+   <children>
+      <ImageView fitHeight="406.0" fitWidth="621.0" layoutX="-3.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/background.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="188.0" layoutY="32.0" prefHeight="36.0" prefWidth="228.0" text="Consulta de Empleados">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="93.0" prefHeight="27.0" prefWidth="64.0" text="Nombre:" />
+      <Label layoutX="32.0" layoutY="124.0" prefHeight="27.0" prefWidth="64.0" text="Apellido: " />
+      <TextField fx:id="txtNombre" layoutX="110.0" layoutY="93.0" prefHeight="26.0" prefWidth="206.0" />
+      <TextField fx:id="txtApellido" layoutX="110.0" layoutY="124.0" prefHeight="26.0" prefWidth="206.0" />
+      <Button fx:id="btnConsultar" defaultButton="true" layoutX="155.0" layoutY="160.0" mnemonicParsing="false" onMouseClicked="#consultar" prefHeight="36.0" prefWidth="117.0" text="Consultar" />
+      <TableView fx:id="tblEmpleados" layoutX="28.0" layoutY="216.0" prefHeight="162.0" prefWidth="553.0">
+        <columns>
+          <TableColumn fx:id="clmCedula" prefWidth="100.0" text="Cédula" />
+          <TableColumn fx:id="clmNombre" prefWidth="86.0" text="Nombre" />
+            <TableColumn fx:id="clmApellido" prefWidth="101.0" text="Apellido" />
+            <TableColumn fx:id="clmEmail" prefWidth="99.0" text="Email" />
+            <TableColumn fx:id="clmUsuario" prefWidth="81.0" text="Usuario" />
+            <TableColumn fx:id="clmPassword" prefWidth="83.0" text="Password" />
+        </columns>
+      </TableView>
+      <Label layoutX="32.0" layoutY="65.0" prefHeight="27.0" prefWidth="171.0" text="Ingrese empleado a consultar:" />
+      <Button fx:id="btnAtras" layoutX="521.0" layoutY="32.0" mnemonicParsing="false" onMouseClicked="#atras" style="-fx-background-color: Aquamarine;" text="Atras" />
+      <Label layoutX="344.0" layoutY="75.0" prefHeight="25.0" prefWidth="50.0" text="Cédula:" />
+      <Label layoutX="344.0" layoutY="92.0" prefHeight="25.0" prefWidth="50.0" text="Nombre:" />
+      <Label layoutX="344.0" layoutY="112.0" prefHeight="25.0" prefWidth="50.0" text="Apellido:" />
+      <Label layoutX="344.0" layoutY="132.0" prefHeight="25.0" prefWidth="50.0" text="Email:" />
+      <Label layoutX="344.0" layoutY="150.0" prefHeight="25.0" prefWidth="50.0" text="Usuario:" />
+      <Label layoutX="344.0" layoutY="170.0" prefHeight="25.0" prefWidth="58.0" text="Password:" />
+      <Label fx:id="lblCedula" layoutX="416.0" layoutY="79.0" prefHeight="17.0" prefWidth="153.0" />
+      <Label fx:id="lblNombre" layoutX="416.0" layoutY="96.0" prefHeight="17.0" prefWidth="153.0" />
+      <Label fx:id="lblApellido" layoutX="416.0" layoutY="116.0" prefHeight="17.0" prefWidth="153.0" />
+      <Label fx:id="lblEmail" layoutX="416.0" layoutY="136.0" prefHeight="17.0" prefWidth="153.0" />
+      <Label fx:id="lblUsuario" layoutX="416.0" layoutY="154.0" prefHeight="17.0" prefWidth="153.0" />
+      <Label fx:id="lblPassword" layoutX="416.0" layoutY="174.0" prefHeight="17.0" prefWidth="153.0" />
+   </children>
+</AnchorPane>

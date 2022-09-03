@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectogestion.AdminConsultProveedorController">
+   <children>
+      <ImageView fitHeight="406.0" fitWidth="621.0" layoutX="-3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/background.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="188.0" layoutY="32.0" prefHeight="36.0" prefWidth="228.0" text="Consulta de Proveedores">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="124.0" prefHeight="27.0" prefWidth="64.0" text="Nombre:" />
+      <TextField fx:id="txtNombre" layoutX="105.0" layoutY="124.0" prefHeight="26.0" prefWidth="206.0" />
+      <Button fx:id="btnConsultar" defaultButton="true" layoutX="127.0" layoutY="163.0" mnemonicParsing="false" onMouseClicked="#consultar" prefHeight="46.0" prefWidth="123.0" text="Consultar" />
+      <TableView fx:id="tblProveedores" layoutX="16.0" layoutY="223.0" prefHeight="162.0" prefWidth="580.0">
+        <columns>
+          <TableColumn fx:id="clmRuc" prefWidth="85.60003662109375" text="RUC" />
+          <TableColumn fx:id="clmNombre" prefWidth="137.5999755859375" text="Nombre" />
+            <TableColumn fx:id="clmTelefono" prefWidth="121.60005187988281" text="Teléfono" />
+            <TableColumn fx:id="clmDireccion" prefWidth="116.79998779296875" text="Dirección" />
+            <TableColumn fx:id="clmEmail" prefWidth="125.60009765625" text="Email" />
+        </columns>
+      </TableView>
+      <Label layoutX="27.0" layoutY="86.0" prefHeight="27.0" prefWidth="171.0" text="Ingrese proveedor a consultar:" />
+      <Button fx:id="btnAtras" layoutX="521.0" layoutY="32.0" mnemonicParsing="false" onMouseClicked="#atras" style="-fx-background-color: Aquamarine;" text="Atras" />
+      <Label layoutX="345.0" layoutY="78.0" text="RUC:" />
+      <Label layoutX="345.0" layoutY="104.0" text="Nombre:" />
+      <Label layoutX="345.0" layoutY="129.0" text="Teléfono:" />
+      <Label layoutX="345.0" layoutY="155.0" text="Dirección:" />
+      <Label layoutX="345.0" layoutY="180.0" text="Email:" />
+      <Label fx:id="lblRuc" layoutX="416.0" layoutY="78.0" prefHeight="17.0" prefWidth="143.0" />
+      <Label fx:id="lblNombre" layoutX="416.0" layoutY="104.0" prefHeight="17.0" prefWidth="143.0" />
+      <Label fx:id="lblTelefono" layoutX="416.0" layoutY="129.0" prefHeight="17.0" prefWidth="143.0" />
+      <Label fx:id="lblDireccion" layoutX="416.0" layoutY="155.0" prefHeight="17.0" prefWidth="143.0" />
+      <Label fx:id="lblEmail" layoutX="416.0" layoutY="180.0" prefHeight="17.0" prefWidth="143.0" />
+   </children>
+</AnchorPane>

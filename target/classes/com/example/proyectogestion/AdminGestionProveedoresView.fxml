@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectogestion.AdminGestionProveedoresController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="606.0" layoutX="-3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/background.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="185.0" layoutY="52.0" prefHeight="38.0" prefWidth="284.0" text="Registro de proveedores">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Pane layoutX="91.0" layoutY="131.0" prefHeight="200.0" prefWidth="414.0" style="-fx-background-color: White; -fx-border-color: black;">
+         <children>
+            <Button fx:id="btnAgregar" layoutX="14.0" layoutY="57.0" mnemonicParsing="false" onMouseClicked="#agregar" prefHeight="38.0" prefWidth="123.0" text="Agregar proveedor" />
+            <Button fx:id="btnConsultProv" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onMouseClicked="#consultar" prefHeight="38.0" prefWidth="135.0" text="Consultar proveedor" />
+            <ImageView fitHeight="174.0" fitWidth="182.0" layoutX="240.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/png-tranproveedor.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnEliminar" layoutX="14.0" layoutY="144.0" mnemonicParsing="false" onMouseClicked="#eliminar" prefHeight="38.0" prefWidth="123.0" text="Eliminar proveedor" />
+            <Button fx:id="btnModificar" layoutX="14.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#modificar" prefHeight="38.0" prefWidth="135.0" text="Modificar proveedor" />
+         </children>
+      </Pane>
+      <Button fx:id="btnAtras" layoutX="499.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#atras" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: Aquamarine;" text="Atras" />
+   </children>
+</AnchorPane>

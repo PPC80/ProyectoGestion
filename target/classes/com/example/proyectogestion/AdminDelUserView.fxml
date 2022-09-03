@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectogestion.AdminDelUserController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/background.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="158.0" layoutY="52.0" prefHeight="38.0" prefWidth="282.0" text="Eliminacion de usuarios">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Pane layoutX="33.0" layoutY="118.0" prefHeight="217.0" prefWidth="534.0" style="-fx-background-color: White; -fx-border-color: black;">
+         <children>
+            <Label layoutX="29.0" layoutY="25.0" prefHeight="17.0" prefWidth="228.0" text="Ingrese la cédula del usuario a eliminar:" />
+            <Label layoutX="29.0" layoutY="72.0" prefHeight="17.0" prefWidth="53.0" text="Cedula:" />
+            <TextField fx:id="txtCedula" layoutX="92.0" layoutY="68.0" prefHeight="25.0" prefWidth="199.0" />
+            <Button fx:id="btnEliminar" defaultButton="true" layoutX="125.0" layoutY="134.0" mnemonicParsing="false" onMouseClicked="#eliminar" prefHeight="38.0" prefWidth="85.0" text="Eliminar" />
+            <ImageView fitHeight="121.0" fitWidth="116.0" layoutX="364.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/Dempleado.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Button fx:id="btnAtras" layoutX="523.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#atras" style="-fx-background-color: Aquamarine;" text="Atras" />
+   </children>
+</AnchorPane>

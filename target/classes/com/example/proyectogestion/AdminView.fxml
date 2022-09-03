@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectogestion.AdminController">
+   <children>
+      <ImageView fitHeight="409.0" fitWidth="602.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/background.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="200.0" layoutY="40.0" prefHeight="38.0" prefWidth="230.0" text="Perfil Administrador">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnGestion" layoutX="29.0" layoutY="192.0" mnemonicParsing="false" onMouseClicked="#abrirGestion" prefHeight="26.0" prefWidth="133.0" text="Gestionar empleados" />
+      <Button fx:id="btnProductos" layoutX="414.0" layoutY="192.0" mnemonicParsing="false" onMouseClicked="#abrirProd" prefHeight="26.0" prefWidth="147.0" text="Registro de Productos" />
+      <ImageView fitHeight="80.0" fitWidth="102.0" layoutX="448.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Stocks.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="106.0" fitWidth="102.0" layoutX="45.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/empleado.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnSalir" layoutX="547.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#salir" style="-fx-background-color: Aquamarine;" text="Salir" />
+      <Button fx:id="btnEstadisticas" layoutX="426.0" layoutY="348.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="123.0" text="Estadisticas Ventas" />
+      <ImageView fitHeight="65.0" fitWidth="134.0" layoutX="430.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/estadistic.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnProveedores" layoutX="216.0" layoutY="192.0" mnemonicParsing="false" onMouseClicked="#abrirProv" prefHeight="26.0" prefWidth="147.0" text="Registro de Proveedores" />
+      <Button fx:id="btnVentas" layoutX="56.0" layoutY="348.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="80.0" text="Ventas" />
+      <ImageView fitHeight="80.0" fitWidth="102.0" layoutX="250.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/png-tranproveedor.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="102.0" layoutX="45.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/venta.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnFacturacion" layoutX="250.0" layoutY="348.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="80.0" text="Facturacion" />
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="250.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/facturacion.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectogestion.AdminDelProveedorController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/background.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="158.0" layoutY="52.0" prefHeight="38.0" prefWidth="282.0" text="Eliminación de proveedor">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Pane layoutX="57.0" layoutY="115.0" prefHeight="204.0" prefWidth="484.0" style="-fx-background-color: White; -fx-border-color: black;">
+         <children>
+            <Label layoutX="29.0" layoutY="25.0" prefHeight="17.0" prefWidth="228.0" text="Ingrese datos del proveedor a eliminar:" />
+            <Label layoutX="29.0" layoutY="73.0" prefHeight="17.0" prefWidth="53.0" text="RUC:" />
+            <TextField fx:id="txtRuc" layoutX="90.0" layoutY="69.0" prefHeight="25.0" prefWidth="199.0" />
+            <Button fx:id="btnEliminar" defaultButton="true" layoutX="143.0" layoutY="126.0" mnemonicParsing="false" onMouseClicked="#eliminar" prefHeight="38.0" prefWidth="85.0" text="Eliminar" />
+            <ImageView fitHeight="121.0" fitWidth="116.0" layoutX="338.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/Dempleado.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Button fx:id="btnAtras" layoutX="523.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#atras" style="-fx-background-color: Aquamarine;" text="Atras" />
+   </children>
+</AnchorPane>

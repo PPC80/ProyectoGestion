@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectogestion.AdminAddEmpController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="634.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/background.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="81.0" layoutY="86.0" prefHeight="274.0" prefWidth="439.0" style="-fx-border-color: Black; -fx-background-color: White;">
+         <children>
+            <Label layoutX="48.0" layoutY="57.0" prefHeight="27.0" prefWidth="64.0" text="Nombres:" />
+            <TextField fx:id="txtNombre" layoutX="114.0" layoutY="58.0" prefHeight="25.0" prefWidth="259.0" />
+            <Label layoutX="48.0" layoutY="88.0" prefHeight="27.0" prefWidth="64.0" text="Apellidos: " />
+            <TextField fx:id="txtApellido" layoutX="114.0" layoutY="89.0" prefHeight="25.0" prefWidth="259.0" />
+            <Button fx:id="btnRegistrar" defaultButton="true" layoutX="157.0" layoutY="215.0" mnemonicParsing="false" onMouseClicked="#registrar" prefHeight="36.0" prefWidth="126.0" style="-fx-background-color: Aquamarine;" text="Registrar Empleado" />
+            <ImageView fitHeight="62.0" fitWidth="64.0" layoutX="189.0" layoutY="-31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/empleado.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="48.0" layoutY="119.0" prefHeight="27.0" prefWidth="64.0" text="Cédula:" />
+            <Label layoutX="48.0" layoutY="152.0" prefHeight="27.0" prefWidth="64.0" text="Email:" />
+            <TextField fx:id="txtCedula" layoutX="114.0" layoutY="120.0" prefHeight="25.0" prefWidth="259.0" />
+            <TextField fx:id="txtEmail" layoutX="114.0" layoutY="153.0" prefHeight="25.0" prefWidth="259.0" />
+         </children></Pane>
+      <Label layoutX="81.0" layoutY="32.0" prefHeight="36.0" prefWidth="198.0" text="Registrar Empleado">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAtras" layoutX="536.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#atras" style="-fx-background-color: Aquamarine;" text="Atras" />
+   </children>
+</AnchorPane>

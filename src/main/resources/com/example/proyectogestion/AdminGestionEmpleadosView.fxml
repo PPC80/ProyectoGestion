@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectogestion.AdminGestionEmpleadosController">
+   <children>
+      <ImageView fitHeight="425.0" fitWidth="636.0" layoutX="-27.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/background.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnAgregarUsu" layoutX="63.0" layoutY="286.0" mnemonicParsing="false" onMouseClicked="#AgregarUsu" text="Ingresar nuevo Usuario" />
+      <Button fx:id="btnEliminarUsu" layoutX="440.0" layoutY="286.0" mnemonicParsing="false" onMouseClicked="#EliminarUsu" text="Eliminar Usuario" />
+      <Button fx:id="btnModUsu" layoutX="263.0" layoutY="286.0" mnemonicParsing="false" onMouseClicked="#ModUsu" text="Modificar Usuario" />
+      <Label layoutX="252.0" layoutY="46.0" prefHeight="38.0" prefWidth="126.0" text="Empleados">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="104.0" fitWidth="102.0" layoutX="79.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/empleado.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="73.0" fitWidth="139.0" layoutX="245.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Mempleado.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="98.0" fitWidth="95.0" layoutX="443.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Dempleado.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="BtnAtras" layoutX="35.0" layoutY="34.0" mnemonicParsing="false" onMouseClicked="#atras" style="-fx-background-color: Aquamarine;" text="Atras" />
+      <Button fx:id="btnAgregarEmp" layoutX="57.0" layoutY="247.0" mnemonicParsing="false" onMouseClicked="#AgregarEmp" text="Ingresar nuevo Empleado" />
+      <Button fx:id="btnModEmp" layoutX="256.0" layoutY="247.0" mnemonicParsing="false" onMouseClicked="#ModEmp" text="Modificar Empleado" />
+      <Button fx:id="btnEliminarEmp" layoutX="433.0" layoutY="247.0" mnemonicParsing="false" onMouseClicked="#EliminarEmp" text="Eliminar Empleado" />
+      <Button fx:id="btnConsultar" layoutX="219.0" layoutY="344.0" mnemonicParsing="false" onMouseClicked="#consultar" prefHeight="38.0" prefWidth="192.0" text="Consultar Empleados" />
+   </children>
+</AnchorPane>
