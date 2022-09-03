@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectogestion.AdminModProductoController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/background.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="158.0" layoutY="18.0" prefHeight="38.0" prefWidth="291.0" text="Modificación de producto">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Pane layoutX="33.0" layoutY="66.0" prefHeight="305.0" prefWidth="534.0" style="-fx-background-color: White; -fx-border-color: black;">
+         <children>
+            <Label layoutX="44.0" layoutY="13.0" prefHeight="17.0" prefWidth="244.0" text="Ingrese el código del producto a modificar:" />
+            <Label layoutX="44.0" layoutY="39.0" prefHeight="17.0" prefWidth="53.0" text="Código:" />
+            <TextField fx:id="txtCodigo" layoutX="107.0" layoutY="35.0" prefHeight="25.0" prefWidth="199.0" />
+            <Button fx:id="btnModificar" defaultButton="true" layoutX="146.0" layoutY="256.0" mnemonicParsing="false" onMouseClicked="#modificar" prefHeight="38.0" prefWidth="85.0" text="Modificar" />
+            <ImageView fitHeight="103.0" fitWidth="162.0" layoutX="329.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/Mempleado.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="44.0" layoutY="67.0" prefHeight="17.0" prefWidth="244.0" text="Ingrese los nuevos datos:" />
+            <Label layoutX="44.0" layoutY="93.0" prefHeight="17.0" prefWidth="53.0" text="Nombre:" />
+            <TextField fx:id="txtNombre" layoutX="107.0" layoutY="89.0" prefHeight="25.0" prefWidth="199.0" />
+            <Label layoutX="44.0" layoutY="120.0" prefHeight="17.0" prefWidth="60.0" text="Categoría:" />
+            <TextField fx:id="txtCategoria" layoutX="107.0" layoutY="116.0" prefHeight="25.0" prefWidth="199.0" />
+            <Label layoutX="44.0" layoutY="147.0" prefHeight="17.0" prefWidth="53.0" text="Detalle:" />
+            <TextField fx:id="txtDetalle" layoutX="107.0" layoutY="143.0" prefHeight="25.0" prefWidth="199.0" />
+            <Label layoutX="19.0" layoutY="174.0" prefHeight="17.0" prefWidth="78.0" text="Valor Compra:" />
+            <TextField fx:id="txtValCompra" layoutX="107.0" layoutY="170.0" prefHeight="25.0" prefWidth="199.0" />
+            <TextField fx:id="txtValVenta" layoutX="107.0" layoutY="198.0" prefHeight="25.0" prefWidth="199.0" />
+            <Label layoutX="26.0" layoutY="202.0" prefHeight="17.0" prefWidth="71.0" text="Valor Venta:" />
+            <Label layoutX="44.0" layoutY="232.0" prefHeight="17.0" prefWidth="53.0" text="IVA:" />
+            <RadioButton fx:id="rbtnSi" layoutX="123.0" layoutY="232.0" mnemonicParsing="false" text="Si" />
+            <RadioButton fx:id="rbtnNo" layoutX="201.0" layoutY="232.0" mnemonicParsing="false" text="No" />
+         </children>
+      </Pane>
+      <Button fx:id="btnAtras" layoutX="523.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#atras" style="-fx-background-color: Aquamarine;" text="Atras" />
+   </children>
+</AnchorPane>

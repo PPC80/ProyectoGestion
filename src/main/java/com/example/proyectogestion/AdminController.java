@@ -60,7 +60,7 @@ public class AdminController {
 
     @FXML
     void abrirProd(MouseEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("AdminGestionEmpleadosView.fxml"));
+        root = FXMLLoader.load(getClass().getResource("AdminGestionProductosView.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

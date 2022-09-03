@@ -9,10 +9,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.sql.PreparedStatement;
 
-public class AdminAddEmpController {
+public class AdminAddCategoriaController {
 
     @FXML
     private Button btnAtras;
@@ -21,61 +22,48 @@ public class AdminAddEmpController {
     private Button btnRegistrar;
 
     @FXML
-    private TextField txtApellido;
-
-    @FXML
-    private TextField txtCedula;
-
-    @FXML
-    private TextField txtEmail;
-
-    @FXML
     private TextField txtNombre;
 
     private Stage stage;
     private Scene scene;
     private Parent root;
 
-    private int cedula;
-    private String nombres, apeliidos, email;
+    private String nombre;
     private boolean retomarDatos = false;
     private Conexion conexion = new Conexion();
-    private final String INSERT_EMPLEADO = "INSERT INTO empleados VALUES (?,?,?,?);";
+    private final String INSERT_CATEGORIA = "INSERT INTO categorias (NOMCAT) VALUES (?);";
 
     @FXML
     void registrar(MouseEvent event) throws IOException {
         boolean success = false;
         tomarDatos();
         if(retomarDatos){
-            Alertas.error("Por favor llenar todos los campos con el formato adecuado");
+            Alertas.error("Por favor llenar el campo con el formato adecuado");
         } else {
             conexion.establecerConexion();
             PreparedStatement preparedStatement = null;
             try {
-                preparedStatement = conexion.getConnection().prepareStatement(INSERT_EMPLEADO);
-                preparedStatement.setInt(1, cedula);
-                preparedStatement.setString(2, nombres);
-                preparedStatement.setString(3, apeliidos);
-                preparedStatement.setString(4, email);
+                preparedStatement = conexion.getConnection().prepareStatement(INSERT_CATEGORIA);
+                preparedStatement.setString(1, nombre);
                 if (preparedStatement.executeUpdate() == 0) {
-                    System.out.println("NO SE HA INSERTADO AL EMPLEADO CORRECTAMENTE");
+                    System.out.println("NO SE HA INSERTADO LA CATEGORIA CORRECTAMENTE");
                 } else {
                     success = true;
-                    System.out.println("EMPLEADO INSERTADO CORRECTAMENTE");
-                    Alertas.info("Empleado registrado correctamente.");
+                    System.out.println("CATEGORIA INSERTADA CORRECTAMENTE");
+                    Alertas.info("Categoria registrada correctamente.");
                 }
             } catch (Exception e) {
                 System.out.println("ERROR CON LA SENTENCIA SQL...");
-                Alertas.error("Datos mal ingresados o ese empleado ya se encuentra registrado...");
+                Alertas.error("Datos mal ingresados o esa categoria ya se encuentra registrada...");
             } finally {
                 PreparedStateCerrar.cerrarStatement(preparedStatement);
             }
             conexion.cerrarConexion();
 
             if(success){
-                root = FXMLLoader.load(getClass().getResource("AdminGestionEmpleadosView.fxml"));
+                root = FXMLLoader.load(getClass().getResource("AdminGestionProductosView.fxml"));
             } else {
-                root = FXMLLoader.load(getClass().getResource("AdminAddEmpView.fxml"));
+                root = FXMLLoader.load(getClass().getResource("AdminAddCategoriaView.fxml"));
             }
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
@@ -86,7 +74,7 @@ public class AdminAddEmpController {
 
     @FXML
     void atras(MouseEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("AdminGestionEmpleadosView.fxml"));
+        root = FXMLLoader.load(getClass().getResource("AdminGestionProductosView.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -96,10 +84,7 @@ public class AdminAddEmpController {
     public void tomarDatos(){
         try{
             retomarDatos = false;
-            nombres = txtNombre.getText();
-            apeliidos = txtApellido.getText();
-            email = txtEmail.getText();
-            cedula = Integer.parseInt(txtCedula.getText());
+            nombre = txtNombre.getText();
         } catch(NumberFormatException e){
             retomarDatos = true;
         }
