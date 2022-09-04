@@ -139,7 +139,7 @@ public class AdminModProductoController implements Initializable {
 
     @FXML
     void atras(MouseEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("AdminGestionEmpleadosView.fxml"));
+        root = FXMLLoader.load(getClass().getResource("AdminGestionProductosView.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

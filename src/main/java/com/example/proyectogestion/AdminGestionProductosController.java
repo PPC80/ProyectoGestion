@@ -71,13 +71,21 @@ public class AdminGestionProductosController {
     }
 
     @FXML
-    void consultarCat(MouseEvent event) {
-
+    void consultarCat(MouseEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("AdminConsultCategoriaView.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
-    void consultarProd(MouseEvent event) {
-
+    void consultarProd(MouseEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("AdminConsultProductView.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -118,7 +126,7 @@ public class AdminGestionProductosController {
 
     @FXML
     void atras(MouseEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("AdminGestionProductosView.fxml"));
+        root = FXMLLoader.load(getClass().getResource("AdminView.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
