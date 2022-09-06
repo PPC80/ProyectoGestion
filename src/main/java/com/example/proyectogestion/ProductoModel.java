@@ -1,9 +1,12 @@
 package com.example.proyectogestion;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class ProductoModel {
 
-    private int stock;
-    private double valcompra, valventa;
+    private int stock, cantidad;
+    private double valcompra, valventa, valtotal, aux;
     private String nombre, detalle, categoria, codigo, iva;
 
     public ProductoModel(String codigo, int stock, double valcompra, double valventa, String nombre, String detalle, String categoria, String iva) {
@@ -17,11 +20,27 @@ public class ProductoModel {
         this.iva = iva;
     }
 
-    public ProductoModel(double valventa, String nombre, String detalle, String codigo) {
+    public ProductoModel(double valventa, double valtotal, String nombre, String detalle, String codigo) {
         this.valventa = valventa;
+        this.valtotal = valtotal;
         this.nombre = nombre;
         this.detalle = detalle;
         this.codigo = codigo;
+    }
+
+    public ProductoModel(int cantidad, double valventa, double valtotal, String nombre, String detalle, String codigo) {
+        aux = valtotal * cantidad;
+        BigDecimal valTotalBigDec = new BigDecimal(aux).setScale(2, RoundingMode.HALF_UP);
+        double auxFormatted = valTotalBigDec.doubleValue();
+        this.cantidad = cantidad;
+        this.valventa = valventa;
+        this.valtotal = auxFormatted;
+        this.nombre = nombre;
+        this.detalle = detalle;
+        this.codigo = codigo;
+    }
+
+    public ProductoModel() {
     }
 
     public String getCodigo() {
@@ -86,5 +105,21 @@ public class ProductoModel {
 
     public void setIva(String iva) {
         this.iva = iva;
+    }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public double getValtotal() {
+        return valtotal;
+    }
+
+    public void setValtotal(double valtotal) {
+        this.valtotal = valtotal;
     }
 }

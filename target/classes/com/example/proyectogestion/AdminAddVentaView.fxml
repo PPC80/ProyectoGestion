@@ -1,51 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectgestion.AdminDelUser">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectogestion.AdminAddVentaController">
    <children>
       <ImageView fitHeight="406.0" fitWidth="621.0" layoutX="-3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/background.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="212.0" layoutY="27.0" prefHeight="36.0" prefWidth="122.0" text="Añadir Venta">
+      <Label layoutX="243.0" layoutY="9.0" prefHeight="36.0" prefWidth="122.0" text="Añadir Venta">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="TextAñadirProdVenta" layoutX="241.0" layoutY="86.0" prefHeight="26.0" prefWidth="206.0" />
-      <Button fx:id="BtnBuscarProdVenta" layoutX="243.0" layoutY="121.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="122.0" text="Buscar" />
-      <TableView layoutX="7.0" layoutY="175.0" prefHeight="162.0" prefWidth="590.0">
+      <TextField fx:id="txtNombre" layoutX="223.0" layoutY="51.0" prefHeight="26.0" prefWidth="173.0" />
+      <Button fx:id="btnAgregar" defaultButton="true" layoutX="513.0" layoutY="50.0" mnemonicParsing="false" onMouseClicked="#agregar" prefHeight="27.0" prefWidth="86.0" text="Agregar" />
+      <TableView fx:id="tblSelecc" layoutX="10.0" layoutY="241.0" prefHeight="117.0" prefWidth="590.0">
         <columns>
-          <TableColumn prefWidth="73.60000228881836" text="Codigo" />
-            <TableColumn prefWidth="75.0" text="Nombre" />
-          <TableColumn prefWidth="185.59999084472656" text="Detalle" />
-            <TableColumn prefWidth="76.79998779296875" text="Cantidad" />
-            <TableColumn prefWidth="96.79998779296875" text="Valor unitario" />
-            <TableColumn prefWidth="83.20001220703125" text="Valor total" />
+          <TableColumn fx:id="clmCodigoSelecc" prefWidth="73.60000228881836" text="Codigo" />
+            <TableColumn fx:id="clmNombreSelecc" prefWidth="75.0" text="Nombre" />
+          <TableColumn fx:id="clmDetalleSelecc" prefWidth="185.59999084472656" text="Detalle" />
+            <TableColumn fx:id="clmCantidadSelecc" prefWidth="76.79998779296875" text="Cantidad" />
+            <TableColumn fx:id="clmValorUnitSelecc" prefWidth="96.79998779296875" text="Valor unitario" />
+            <TableColumn fx:id="clmValorTotalSelecc" prefWidth="83.20001220703125" text="Valor total" />
         </columns>
       </TableView>
-      <Label layoutX="27.0" layoutY="86.0" prefHeight="27.0" prefWidth="214.0" text="Ingrese el producto a añadir:">
+      <Label layoutX="16.0" layoutY="50.0" prefHeight="27.0" prefWidth="214.0" text="Ingrese el producto a añadir:">
          <font>
             <Font size="16.0" />
          </font></Label>
-      <Button fx:id="BtnCancellVenta" layoutX="36.0" layoutY="352.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="110.0" style="-fx-background-color: Aquamarine;" text="Cancelar venta" />
-      <Label layoutX="27.0" layoutY="149.0" prefHeight="26.0" prefWidth="213.0" text="Productos seleccionados:">
+      <Button fx:id="btnCancelar" layoutX="27.0" layoutY="367.0" mnemonicParsing="false" onMouseClicked="#atras" prefHeight="26.0" prefWidth="110.0" text="Cancelar venta" />
+      <Label layoutX="10.0" layoutY="211.0" prefHeight="26.0" prefWidth="213.0" text="Productos seleccionados:">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Button fx:id="BtnConsumidorFinal" layoutX="324.0" layoutY="352.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="122.0" text="Consumidor Final" />
-      <Button fx:id="BtnFactura" layoutX="464.0" layoutY="352.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="122.0" text="Factura" />
-      <Button fx:id="BtnAtrasAddVenta" layoutX="534.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="59.0" style="-fx-background-color: Aquamarine;" text="Atras" />
+      <Button fx:id="btnConsumidor" layoutX="334.0" layoutY="366.0" mnemonicParsing="false" onMouseClicked="#generarConsumidor" prefHeight="27.0" prefWidth="122.0" text="Consumidor Final" />
+      <Button fx:id="btnFactura" layoutX="464.0" layoutY="366.0" mnemonicParsing="false" onMouseClicked="#generarFactura" prefHeight="27.0" prefWidth="122.0" text="Factura" />
+      <TableView fx:id="tblBuscar" layoutX="10.0" layoutY="89.0" prefHeight="117.0" prefWidth="590.0">
+         <columns>
+            <TableColumn fx:id="clmCodigoBuscar" prefWidth="73.60000228881836" text="Codigo" />
+            <TableColumn fx:id="clmNombreBuscar" prefWidth="75.0" text="Nombre" />
+            <TableColumn fx:id="clmDetalleBuscar" prefWidth="198.0" text="Detalle" />
+            <TableColumn fx:id="clmValorUnitBuscar" prefWidth="114.0" text="Valor unitario" />
+            <TableColumn fx:id="clmValorTotalBuscar" prefWidth="125.0" text="Valor total (Inc. IVA)" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtCantidad" layoutX="405.0" layoutY="51.0" prefHeight="26.0" prefWidth="102.0" promptText="Cantidad" />
+      <Button fx:id="btnEliminar" layoutX="512.0" layoutY="212.0" mnemonicParsing="false" onMouseClicked="#eliminar" prefHeight="0.0" prefWidth="86.0" text="Eliminar" />
    </children>
 </AnchorPane>

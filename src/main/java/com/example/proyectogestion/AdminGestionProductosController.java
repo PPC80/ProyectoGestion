@@ -48,8 +48,12 @@ public class AdminGestionProductosController {
     private Parent root;
 
     @FXML
-    void gestionarStock(MouseEvent event) {
-
+    void gestionarStock(MouseEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("AdminModStockView.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML

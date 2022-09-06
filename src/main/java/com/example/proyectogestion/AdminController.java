@@ -68,6 +68,15 @@ public class AdminController {
     }
 
     @FXML
+    void abrirVentas(MouseEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("ModuloVentasView.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
     void salir(MouseEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("loginView.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();

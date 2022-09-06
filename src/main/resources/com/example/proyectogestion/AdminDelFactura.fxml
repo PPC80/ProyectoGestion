@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectgestion.AdminDellUser">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/background.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="158.0" layoutY="52.0" prefHeight="38.0" prefWidth="282.0" text="Cancelar Factura">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Pane layoutX="33.0" layoutY="118.0" prefHeight="267.0" prefWidth="534.0" style="-fx-background-color: White; -fx-border-color: black;">
+         <children>
+            <Label layoutX="29.0" layoutY="25.0" prefHeight="17.0" prefWidth="228.0" text="Ingrese datos de la factura a cancelar:" />
+            <Label layoutX="29.0" layoutY="73.0" prefHeight="17.0" prefWidth="110.0" text="Numero de factura:" />
+            <Label layoutX="29.0" layoutY="119.0" prefHeight="17.0" prefWidth="110.0" text="Nombre del cliente: :" />
+            <TextField fx:id="TextEliminarNumFact" layoutX="158.0" layoutY="69.0" prefHeight="25.0" prefWidth="199.0" />
+            <TextField fx:id="TextEliminarNameCliFact" layoutX="158.0" layoutY="115.0" prefHeight="25.0" prefWidth="199.0" />
+            <Button fx:id="BtnEliminarFact" layoutX="193.0" layoutY="160.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="80.0" text="ok!" />
+            <ImageView fitHeight="121.0" fitWidth="116.0" layoutX="404.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/facturacion.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Button fx:id="BtnAtrasDelProd" layoutX="523.0" layoutY="26.0" mnemonicParsing="false" style="-fx-background-color: Aquamarine;" text="Atras" />
+   </children>
+</AnchorPane>

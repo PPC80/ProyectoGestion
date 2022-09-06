@@ -37,7 +37,7 @@
          </image>
       </ImageView>
       <Button fx:id="btnProveedores" layoutX="216.0" layoutY="192.0" mnemonicParsing="false" onMouseClicked="#abrirProv" prefHeight="26.0" prefWidth="147.0" text="Registro de Proveedores" />
-      <Button fx:id="btnVentas" layoutX="56.0" layoutY="348.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="80.0" text="Ventas" />
+      <Button fx:id="btnVentas" layoutX="56.0" layoutY="348.0" mnemonicParsing="false" onMouseClicked="#abrirVentas" prefHeight="26.0" prefWidth="80.0" text="Ventas" />
       <ImageView fitHeight="80.0" fitWidth="102.0" layoutX="250.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/png-tranproveedor.png" />

@@ -42,8 +42,6 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-//        Image myLogin = new Image(getClass().getResourceAsStream("/com/login.png"));
-//        imgLogin.setImage(myLogin);
     }
 
     @FXML
@@ -64,9 +62,9 @@ public class LoginController implements Initializable {
                     admin_o_empleado = 1;
                 } else if(Objects.equals(resultSet.getString("IDROL"), "2")){
                     admin_o_empleado = 2;
-//                    PerfilControlador.usuario = txtUsuario.getText();
-//                    PerfilControlador.password = txtPassword.getText();
                 }
+                AdminAddFacturaController.setEmpleado(resultSet.getString(4));
+                AdminAddConsumidorController.setEmpleado(resultSet.getString(4));
                 System.out.println("Bienvenido: " + resultSet.getString(4));
             } else {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -98,25 +96,8 @@ public class LoginController implements Initializable {
             }
         }
         conexion.cerrarConexion();
-//        Stage stage = (Stage) BtnLoginAdmin.getScene().getWindow();
-//        stage.close();
 
         if(admin_o_empleado == 1){
-//            FXMLLoader loader = new FXMLLoader(getClass().getResource("AdminView.fxml"));
-//            Parent root = loader.load();
-//            AdminController controlador = loader.getController();
-//            Scene scene = new Scene(root);
-//            stage = new Stage();
-//            stage.initModality(Modality.APPLICATION_MODAL);
-//            stage.setScene(scene);
-//            stage.showAndWait();
-
-//            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AdminView.fxml"));
-//            Scene scene = new Scene(fxmlLoader.load(), 600, 400);
-//            stage.setTitle("Stock Management");
-//            stage.setScene(scene);
-//            stage.show();
-
             root = FXMLLoader.load(getClass().getResource("AdminView.fxml"));
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
@@ -124,21 +105,6 @@ public class LoginController implements Initializable {
             stage.show();
 
         } else if(admin_o_empleado == 2){
-//            FXMLLoader loader = new FXMLLoader(getClass().getResource("indexView.fxml"));
-//            Parent root = loader.load();
-//            //SidePanelControlador controlador = loader.getController();
-//            Scene scene = new Scene(root);
-//            stage = new Stage();
-//            stage.initModality(Modality.APPLICATION_MODAL);
-//            stage.setScene(scene);
-//            stage.showAndWait();
-
-//            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("indexView.fxml"));
-//            Scene scene = new Scene(fxmlLoader.load(), 600, 400);
-//            stage.setTitle("Stock Management");
-//            stage.setScene(scene);
-//            stage.show();
-
             root = FXMLLoader.load(getClass().getResource("indexView.fxml"));
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);

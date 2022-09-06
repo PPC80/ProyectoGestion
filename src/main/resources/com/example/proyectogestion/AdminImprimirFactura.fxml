@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectgestion.GestionarEmpleados">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="606.0" layoutX="-3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/background.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="231.0" layoutY="25.0" prefHeight="38.0" prefWidth="137.0" text="Facturacion">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Button fx:id="BtnAtrasImprimirFact" layoutX="499.0" layoutY="31.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: Aquamarine;" text="Atras" />
+      <Pane layoutX="24.0" layoutY="76.0" prefHeight="53.0" prefWidth="474.0" style="-fx-background-color: White; -fx-border-color: black;">
+         <children>
+            <Label layoutX="14.0" layoutY="18.0" prefHeight="17.0" prefWidth="243.0" text="Ingrese el número de la factura a imprimir:" />
+            <TextField fx:id="TextBuscarNumFact" layoutX="261.0" layoutY="14.0" prefHeight="25.0" prefWidth="199.0" />
+         </children>
+      </Pane>
+      <Button fx:id="BtnBuscarFact" layoutX="507.0" layoutY="89.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="87.0" style="-fx-background-color: Aquamarine;" text="Mostrar" />
+      <TableView layoutX="5.0" layoutY="153.0" prefHeight="46.0" prefWidth="590.0">
+         <columns>
+            <TableColumn prefWidth="58.4000244140625" text="Numero" />
+            <TableColumn prefWidth="178.39996337890625" text="Cliente" />
+            <TableColumn prefWidth="95.20008850097656" text="Cedula" />
+            <TableColumn prefWidth="109.5999755859375" text="Fecha emision" />
+            <TableColumn prefWidth="147.99993896484375" text="Cedula Empleado" />
+         </columns>
+      </TableView>
+      <TableView layoutX="5.0" layoutY="200.0" prefHeight="162.0" prefWidth="590.0">
+         <columns>
+            <TableColumn prefWidth="73.60000228881836" text="Codigo" />
+            <TableColumn prefWidth="92.0" text="Nombre" />
+            <TableColumn prefWidth="168.8000030517578" text="Detalle" />
+            <TableColumn prefWidth="76.79998779296875" text="Cantidad" />
+            <TableColumn prefWidth="96.79998779296875" text="Valor unitario" />
+            <TableColumn prefWidth="83.20001220703125" text="Valor total" />
+         </columns>
+      </TableView>
+      <Button fx:id="BtnImprimir" layoutX="244.0" layoutY="372.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="87.0" style="-fx-background-color: Aquamarine;" text="Imprimir" />
+   </children>
+</AnchorPane>
