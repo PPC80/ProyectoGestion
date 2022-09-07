@@ -35,14 +35,14 @@ public class AdminDelEmpController {
     private Conexion conexion = new Conexion();
     private boolean retomarDatos = false;
     private int cedula;
-    private final String DELETE = "DELETE usuarios.*, empleados.* FROM empleados INNER JOIN usuarios ON empleados.CIEMPL = usuarios.CIEMPL WHERE usuarios.CIEMPL = ?;";
+    private final String DELETE = "DELETE usuarios.*, empleados.* FROM empleados LEFT JOIN usuarios ON empleados.CIEMPL = usuarios.CIEMPL WHERE empleados.CIEMPL = ?;";
 
 
     @FXML
     void eliminar(MouseEvent event) {
         tomarDatos();
         if(retomarDatos){
-            Alertas.error("Por favor llenar todos los campos con el formato adecuado");
+            Alertas.error("Por favor llenar el campo con el formato adecuado");
         } else {
             conexion.establecerConexion();
             PreparedStatement preparedStatement = null;

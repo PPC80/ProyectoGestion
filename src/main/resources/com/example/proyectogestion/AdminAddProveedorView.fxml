@@ -22,7 +22,7 @@
             <TextField fx:id="txtNombre" layoutX="114.0" layoutY="78.0" prefHeight="25.0" prefWidth="259.0" />
             <TextField fx:id="txtTelefono" layoutX="114.0" layoutY="118.0" prefHeight="25.0" prefWidth="259.0" />
             <TextField fx:id="txtDireccion" layoutX="114.0" layoutY="155.0" prefHeight="25.0" prefWidth="259.0" />
-            <Button fx:id="btnRegistrar" layoutX="152.0" layoutY="236.0" mnemonicParsing="false" onMouseClicked="#registrar" prefHeight="36.0" prefWidth="125.0" style="-fx-background-color: Aquamarine;" text="Registrar Proveedor" />
+            <Button fx:id="btnRegistrar" defaultButton="true" layoutX="152.0" layoutY="236.0" mnemonicParsing="false" onMouseClicked="#registrar" prefHeight="36.0" prefWidth="125.0" style="-fx-background-color: Aquamarine;" text="Registrar Proveedor" />
             <ImageView fitHeight="62.0" fitWidth="64.0" layoutX="189.0" layoutY="-31.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/png-tranproveedor.png" />

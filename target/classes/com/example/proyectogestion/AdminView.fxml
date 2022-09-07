@@ -29,7 +29,7 @@
             <Image url="@../../../images/empleado.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnSalir" layoutX="547.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#salir" style="-fx-background-color: Aquamarine;" text="Salir" />
+      <Button fx:id="btnSalir" layoutX="502.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#salir" style="-fx-background-color: Aquamarine;" text="Cerrar Sesión" />
       <Button fx:id="btnEstadisticas" layoutX="426.0" layoutY="348.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="123.0" text="Estadisticas Ventas" />
       <ImageView fitHeight="65.0" fitWidth="134.0" layoutX="430.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -48,7 +48,7 @@
             <Image url="@../../../images/venta.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnFacturacion" layoutX="250.0" layoutY="348.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="80.0" text="Facturacion" />
+      <Button fx:id="btnFacturacion" layoutX="250.0" layoutY="348.0" mnemonicParsing="false" onMouseClicked="#abrirFacturacion" prefHeight="26.0" prefWidth="80.0" text="Facturacion" />
       <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="250.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/facturacion.jpg" />

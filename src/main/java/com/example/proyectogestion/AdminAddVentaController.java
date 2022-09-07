@@ -160,9 +160,6 @@ public class AdminAddVentaController implements Initializable {
             ProductoModel productosCompra = new ProductoModel(cantidad, productoModel.getValtotal(), productoModel.getValtotal(), productoModel.getNombre(), productoModel.getDetalle(), productoModel.getCodigo());
 
             listaQueries.add("INSERT INTO detfactura (NUMFAC, CODPROD, CANTIDAD, PRECIOTOTAL) VALUES (?," + productoModel.getCodigo() + "," + cantidad + "," + (productoModel.getValtotal() * cantidad) + ");");
-            for(String s : listaQueries){
-                System.out.println(s);
-            }
 
             valtotalContador = valtotalContador + productosCompra.getValtotal();
             listaProductosSeleccion.add(productosCompra);
@@ -199,7 +196,7 @@ public class AdminAddVentaController implements Initializable {
                 Scene tableViewScene = new Scene(tableViewParent);
 
                 AdminAddConsumidorController controller = loader.getController();
-                controller.initData(listaProductosSeleccion, valtotalContador);
+                controller.initData(listaProductosSeleccion, valtotalContador, listaQueries);
 
                 Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
 

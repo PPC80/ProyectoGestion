@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectogestion.CancelarFacturaController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/background.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="212.0" layoutY="51.0" prefHeight="38.0" prefWidth="176.0" text="Cancelar Factura">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Pane layoutX="33.0" layoutY="118.0" prefHeight="185.0" prefWidth="534.0" style="-fx-background-color: White; -fx-border-color: black;">
+         <children>
+            <Label layoutX="29.0" layoutY="25.0" prefHeight="17.0" prefWidth="228.0" text="Ingrese datos de la factura a cancelar:" />
+            <Label layoutX="29.0" layoutY="73.0" prefHeight="17.0" prefWidth="110.0" text="Número de factura:" />
+            <TextField fx:id="txtNumfac" layoutX="158.0" layoutY="69.0" prefHeight="25.0" prefWidth="199.0" />
+            <Button fx:id="btnEliminar" defaultButton="true" layoutX="158.0" layoutY="121.0" mnemonicParsing="false" onMouseClicked="#eliminar" prefHeight="25.0" prefWidth="110.0" text="Cancelar Factura" />
+            <ImageView fitHeight="121.0" fitWidth="116.0" layoutX="392.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/facturacion.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Button fx:id="btnAtras" layoutX="523.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#atras" style="-fx-background-color: Aquamarine;" text="Atras" />
+   </children>
+</AnchorPane>

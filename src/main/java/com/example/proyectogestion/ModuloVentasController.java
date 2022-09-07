@@ -20,11 +20,13 @@ public class ModuloVentasController {
     private Button btnIngresarVenta;
 
     @FXML
-    private Button btnModificarVenta;
+    private Button btnConsultarClientes;
 
     private Stage stage;
     private Scene scene;
     private Parent root;
+
+    static int idrol;
 
     @FXML
     void ingresarVenta(MouseEvent event) throws IOException {
@@ -36,17 +38,29 @@ public class ModuloVentasController {
     }
 
     @FXML
-    void modificarVenta(MouseEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("AdminModVentaView.fxml"));
+    void consultarClientes(MouseEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("AdminConsultClientesView.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
 
+    public static int getIdrol() {
+        return idrol;
+    }
+
+    public static void setIdrol(int idrol) {
+        ModuloVentasController.idrol = idrol;
+    }
+
     @FXML
     void atras(MouseEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("AdminView.fxml"));
+        if(idrol == 1){
+            root = FXMLLoader.load(getClass().getResource("AdminView.fxml"));
+        } else if(idrol == 2){
+            root = FXMLLoader.load(getClass().getResource("EmpleadoView.fxml"));
+        }
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

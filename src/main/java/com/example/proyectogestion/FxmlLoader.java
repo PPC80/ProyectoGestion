@@ -12,7 +12,7 @@ public class FxmlLoader extends FXMLLoader{
 
     public Pane getPage(String archivo){
         try{
-            URL archivoURL = HelloApplication.class.getResource("/com/example/programanotas/" + archivo + ".fxml");
+            URL archivoURL = StockManagementApplication.class.getResource("/com/example/programanotas/" + archivo + ".fxml");
             if(archivoURL == null){
                 throw new FileNotFoundException("No se pudo encontrar el archivo FXML...");
             }

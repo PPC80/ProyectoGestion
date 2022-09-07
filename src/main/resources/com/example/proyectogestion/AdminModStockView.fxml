@@ -34,6 +34,6 @@
             <TextField fx:id="txtStock" layoutX="146.0" layoutY="15.0" prefHeight="25.0" prefWidth="259.0" />
          </children>
       </Pane>
-      <Button fx:id="btnRegistrar" layoutX="221.0" layoutY="322.0" mnemonicParsing="false" onMouseClicked="#registrar" prefHeight="25.0" prefWidth="125.0" style="-fx-background-color: Aquamarine;" text="Registrar Stock" />
+      <Button fx:id="btnRegistrar" defaultButton="true" layoutX="221.0" layoutY="322.0" mnemonicParsing="false" onMouseClicked="#registrar" prefHeight="25.0" prefWidth="125.0" style="-fx-background-color: Aquamarine;" text="Registrar Stock" />
    </children>
 </AnchorPane>

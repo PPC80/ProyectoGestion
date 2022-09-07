@@ -20,6 +20,7 @@ import java.net.URL;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -64,6 +65,7 @@ public class AdminAddConsumidorController implements Initializable {
     private int numfac;
     private String numfacFormatted;
     ObservableList<ProductoModel> listaProductos;
+    ArrayList<String> listaQueriesBDD = new ArrayList<>();
 
     final private String INSERT = "INSERT INTO cabfactura (CIEMPL, FECHAEMI) VALUES ((SELECT CIEMPL FROM usuarios WHERE NOMUSU = ?), curdate());";
     final private String SELECT_ID = "SELECT last_insert_id();";
@@ -109,7 +111,31 @@ public class AdminAddConsumidorController implements Initializable {
         txtNumfac.setText(numfacFormatted);
     }
 
-    public void initData(ObservableList<ProductoModel> lista, double valTotal){
+    public void initData(ObservableList<ProductoModel> lista, double valTotal, ArrayList<String> listaQueries){
+        listaQueriesBDD = listaQueries;
+
+        //Añadir detalles de factura a BDD
+        conexion.establecerConexion();
+        PreparedStatement preparedStatementBDD = null;
+        try {
+            for(String s : listaQueriesBDD){
+                preparedStatementBDD = conexion.getConnection().prepareStatement(s);
+                preparedStatementBDD.setString(1, numfacFormatted);
+                if (preparedStatementBDD.executeUpdate() == 0) {
+                    System.out.println("NO SE HA INSERTADO LA DETFACTURA CORRECTAMENTE");
+                } else {
+                    System.out.println("DETFACTURA INSERTADA CORRECTAMENTE");
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("Ocurrio un error en el SQL");
+            e.printStackTrace();
+        } finally {
+            PreparedStateCerrar.cerrarStatement(preparedStatementBDD);
+        }
+        conexion.cerrarConexion();
+
+
         listaProductos = lista;
         tblProductos.setItems(listaProductos);
         BigDecimal valTotalBigDec = new BigDecimal(valTotal).setScale(2, RoundingMode.HALF_UP);

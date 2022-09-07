@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectogestion.AdminController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectogestion.AdminController">
    <children>
       <ImageView fitHeight="409.0" fitWidth="602.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -29,27 +31,21 @@
             <Image url="@../../../images/empleado.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnSalir" layoutX="547.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#salir" style="-fx-background-color: Aquamarine;" text="Salir" />
-      <Button fx:id="btnEstadisticas" layoutX="426.0" layoutY="348.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="123.0" text="Estadisticas Ventas" />
-      <ImageView fitHeight="65.0" fitWidth="134.0" layoutX="430.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../images/estadistic.jpg" />
-         </image>
-      </ImageView>
+      <Button fx:id="btnSalir" layoutX="502.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#salir" style="-fx-background-color: Aquamarine;" text="Cerrar Sesión" />
       <Button fx:id="btnProveedores" layoutX="216.0" layoutY="192.0" mnemonicParsing="false" onMouseClicked="#abrirProv" prefHeight="26.0" prefWidth="147.0" text="Registro de Proveedores" />
-      <Button fx:id="btnVentas" layoutX="56.0" layoutY="348.0" mnemonicParsing="false" onMouseClicked="#abrirVentas" prefHeight="26.0" prefWidth="80.0" text="Ventas" />
+      <Button fx:id="btnVentas" layoutX="159.0" layoutY="341.0" mnemonicParsing="false" onMouseClicked="#abrirVentas" prefHeight="26.0" prefWidth="80.0" text="Ventas" />
       <ImageView fitHeight="80.0" fitWidth="102.0" layoutX="250.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/png-tranproveedor.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="80.0" fitWidth="102.0" layoutX="45.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="80.0" fitWidth="102.0" layoutX="148.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/venta.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnFacturacion" layoutX="250.0" layoutY="348.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="80.0" text="Facturacion" />
-      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="250.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true">
+      <Button fx:id="btnFacturacion" layoutX="353.0" layoutY="341.0" mnemonicParsing="false" onMouseClicked="#abrirFacturacion" prefHeight="26.0" prefWidth="80.0" text="Facturacion" />
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="353.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/facturacion.jpg" />
          </image>

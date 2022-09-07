@@ -65,6 +65,8 @@ public class LoginController implements Initializable {
                 }
                 AdminAddFacturaController.setEmpleado(resultSet.getString(4));
                 AdminAddConsumidorController.setEmpleado(resultSet.getString(4));
+                ModuloFacturacionController.setIdrol(resultSet.getInt("IDROL"));
+                ModuloVentasController.setIdrol(resultSet.getInt("IDROL"));
                 System.out.println("Bienvenido: " + resultSet.getString(4));
             } else {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -105,7 +107,7 @@ public class LoginController implements Initializable {
             stage.show();
 
         } else if(admin_o_empleado == 2){
-            root = FXMLLoader.load(getClass().getResource("indexView.fxml"));
+            root = FXMLLoader.load(getClass().getResource("EmpleadoView.fxml"));
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);

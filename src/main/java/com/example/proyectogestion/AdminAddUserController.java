@@ -117,15 +117,19 @@ public class AdminAddUserController implements Initializable {
                 } else if (rbtnAdmin.isSelected()){
                     idrol = 1;
                 }
-                preparedStatement2.setInt(2, idrol);
-                preparedStatement2.setString(3, usuario);
-                preparedStatement2.setString(4, password);
-                if (preparedStatement2.executeUpdate() == 0) {
-                    System.out.println("NO SE HA INSERTADO AL USUARIO CORRECTAMENTE");
+                if(!rbtnAdmin.isSelected() && !rbtnEmpleado.isSelected()){
+                    Alertas.error("Debe seleccionar un rol.");
                 } else {
-                    success = true;
-                    System.out.println("USUARIO INSERTADO CORRECTAMENTE");
-                    Alertas.info("Usuario registrado correctamente.");
+                    preparedStatement2.setInt(2, idrol);
+                    preparedStatement2.setString(3, usuario);
+                    preparedStatement2.setString(4, password);
+                    if (preparedStatement2.executeUpdate() == 0) {
+                        System.out.println("NO SE HA INSERTADO AL USUARIO CORRECTAMENTE");
+                    } else {
+                        success = true;
+                        System.out.println("USUARIO INSERTADO CORRECTAMENTE");
+                        Alertas.info("Usuario registrado correctamente.");
+                    }
                 }
             } catch (Exception e) {
                 System.out.println("ERROR CON LA SENTENCIA SQL...");

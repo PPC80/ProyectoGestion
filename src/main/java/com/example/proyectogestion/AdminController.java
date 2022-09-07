@@ -7,8 +7,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Pane;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -70,6 +68,15 @@ public class AdminController {
     @FXML
     void abrirVentas(MouseEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("ModuloVentasView.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    void abrirFacturacion(MouseEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("ModuloFacturacionView.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
